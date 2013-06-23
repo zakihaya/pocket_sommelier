@@ -1,5 +1,5 @@
 PocketSommelier::Application.routes.draw do
-  resources :items, :only => [:show]
+  resources :items, :only => [:index, :show]
 
   resources :categories, :only => [:show]
 

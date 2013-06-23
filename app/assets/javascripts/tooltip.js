@@ -37,6 +37,6 @@ function simple_tooltip(target_items, name){
 }
 
 	
-$(document).ready(function(){
-	 simple_tooltip("a.item_link","tooltip");
-});
+//$(document).ready(function(){
+//	 simple_tooltip("a.item_link","tooltip");
+//});
