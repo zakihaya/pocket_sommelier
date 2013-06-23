@@ -272,6 +272,7 @@ DEPENDENCIES
   guard-cucumber
   guard-rspec
   guard-spork
+  haml
   haml-rails
   i18n_generators
   jquery-rails
