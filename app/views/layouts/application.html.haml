@@ -88,6 +88,36 @@
           = yield
       / /row
       %footer
+        .row.well
+          .span2
+            %ul.nav.nav-list
+              %li.nav-header トップ
+              %li= link_to 'サイトトップ', root_path
+          .span2
+            %ul.nav.nav-list
+              %li.nav-header 評価
+              %li= link_to '超大人気(星5つ！)', valuation_path(1)
+              %li= link_to '大人気(星4つ半)', valuation_path(2)
+              %li= link_to '人気(星4つ)', valuation_path(3)
+          .span2
+            %ul.nav.nav-list
+              %li.nav-header 特徴
+              - Feature.all.each do |feature|
+                %li= link_to feature.name, feature_path(feature)
+          .span2
+            %ul.nav.nav-list
+              %li.nav-header 価格
+              %li= link_to '1000円以下', search_path(max_price: 1000)
+              %li= link_to '1000円〜3000円', search_path(max_price: 3000, min_price: 1000)
+              %li= link_to '3000円〜5000円', search_path(max_price: 5000, min_price: 3000)
+              %li= link_to '5000円以上', search_path(min_price: 5000)
+          .span2
+            %ul.nav.nav-list
+              %li.nav-header カテゴリ
+              %li= link_to Category.find(1).name, category_path(1)
+              %li= link_to Category.find(2).name, category_path(2)
+              %li= link_to Category.find(3).name, category_path(3)
+              %li= link_to Category.find(4).name, category_path(4)
         %p &copy; Pocket Sommelier 2013
     / /container
     /
