@@ -1,4 +1,5 @@
-= content_for :title do
-  #{@category.name}ワイン
+- @title = "#{@category.name}"
+- @keyword = @category.name
+- @description = " #{@category.name}のページです。"
 
 = render 'shared/items', items: @category.items

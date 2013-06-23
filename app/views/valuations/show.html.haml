@@ -1,1 +1,12 @@
+- if params[:id] == "1"
+  - valuation = '超大人気'
+- elsif params[:id] == "2"
+  - valuation = '大人気'
+- elsif params[:id] == "3"
+  - valuation = '人気'
+
+- @title = "#{valuation}ワイン"
+- @keyword = "#{valuation}ワイン"
+- @description = " #{valuation}ワインのページです。"
+
 = render 'shared/items', items: @items

@@ -23,11 +23,11 @@ namespace :import do
     end
 
     task :all => :environment do
+      import_items('302799', 5)
       import_items('563339', 1)
       import_items('563340', 2)
       import_items('563341', 3)
       import_items('563342', 4)
-      import_items('302799', 5)
     end
   end
 end
