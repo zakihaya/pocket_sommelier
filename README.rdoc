@@ -1,0 +1,7 @@
+== Pocket Sommelier
+
+This application is created at afthon#2.
+http://atnd.org/event/afthon2
+
+I like wine very much, but present Rakuten web site can't search by user valuation.
+So I created application which can search popular and high valuation wine through Rakuten API.

@@ -1,0 +1,33 @@
+%h1 Listing items
+
+%table
+  %tr
+    %th Provider type
+    %th Name
+    %th Price
+    %th Caption
+    %th Url
+    %th Tax exclude
+    %th Review count
+    %th Review average
+    %th
+    %th
+    %th
+
+  - @items.each do |item|
+    %tr
+      %td= item.provider_type
+      %td= item.name
+      %td= item.price
+      %td= item.caption
+      %td= item.url
+      %td= item.tax_exclude
+      %td= item.review_count
+      %td= item.review_average
+      %td= link_to 'Show', item
+      %td= link_to 'Edit', edit_item_path(item)
+      %td= link_to 'Destroy', item, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Item', new_item_path

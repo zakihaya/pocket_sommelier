@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Provider type:
+  = @item.provider_type
+%p
+  %b Name:
+  = @item.name
+%p
+  %b Price:
+  = @item.price
+%p
+  %b Caption:
+  = @item.caption
+%p
+  %b Url:
+  = @item.url
+%p
+  %b Tax exclude:
+  = @item.tax_exclude
+%p
+  %b Review count:
+  = @item.review_count
+%p
+  %b Review average:
+  = @item.review_average
+
+= link_to 'Edit', edit_item_path(@item)
+\|
+= link_to 'Back', items_path
