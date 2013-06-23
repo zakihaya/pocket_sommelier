@@ -1,1 +1,5 @@
-= render 'shared/items', items: @items
+- @title = "#{@feature.name}ワイン"
+- @keyword = @feature.name
+- @description = " #{@feature.name}ワインのページです。"
+
+= render 'shared/items', items: @feature.items

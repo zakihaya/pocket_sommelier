@@ -1,5 +1,5 @@
 class FeaturesController < ApplicationController
   def show
-    @items = Feature.find(params[:id]).items
+    @feature = Feature.find(params[:id])
   end
 end
