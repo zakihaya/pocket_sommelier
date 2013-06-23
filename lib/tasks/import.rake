@@ -1,3 +1,5 @@
+require 'net/http'
+
 namespace :import do
   namespace :rakuten do
     task :red_wine => :environment do
