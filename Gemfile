@@ -15,21 +15,17 @@ gem 'i18n_generators'
 gem 'haml'
 gem 'haml-rails'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+gem 'sass-rails',   '~> 3.2.3'
+gem 'coffee-rails', '~> 3.2.1'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+# gem 'therubyracer', :platforms => :ruby
 
-  gem 'less-rails' #あとで必要と言われるのでこの行も追加
-  gem 'twitter-bootstrap-rails' #まずはこの行を追加
-  gem 'therubyracer', :platforms => :ruby #あとで必要と言われるのでこの行のコメントを外しておく
+gem 'less-rails' #あとで必要と言われるのでこの行も追加
+gem 'twitter-bootstrap-rails' #まずはこの行を追加
+gem 'therubyracer', :platforms => :ruby #あとで必要と言われるのでこの行のコメントを外しておく
 
-  gem 'uglifier', '>= 1.0.3'
-end
+gem 'uglifier', '>= 1.0.3'
 
 group :development, :test do
   gem 'sqlite3'
