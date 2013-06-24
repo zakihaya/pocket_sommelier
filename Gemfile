@@ -11,6 +11,7 @@ gem 'jquery-rails'
 gem 'kaminari'
 gem 'bootstrap-sass-rails'
 gem 'i18n_generators'
+gem 'sitemap_generator'
 
 gem 'haml'
 gem 'haml-rails'

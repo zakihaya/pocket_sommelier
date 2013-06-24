@@ -6,6 +6,8 @@ PocketSommelier::Application.routes.draw do
   resources :valuations, :only => [:show]
   resources :features, :only => [:show]
 
+  resource :sitemap, :only => [:show]
+
   get '/search' => 'search#index', :as => 'search'
 
 
