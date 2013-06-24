@@ -2,7 +2,7 @@
   商品が見つかりませんでした。
 - else
   - items.each do |item|
-    = link_to item.url, class: 'item_link', target: '_blank' do
+    = link_to item.url, class: 'item_link', rel: 'nofollow', target: '_blank' do
       .item_flame{style: 'overflow:hidden;'}
         .well{style: 'text-align:center;'}
           %div{style:'float:left;width:98px;margin-right:15px;'}
