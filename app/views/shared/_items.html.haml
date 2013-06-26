@@ -4,7 +4,9 @@
   - items.each do |item|
     = link_to item.url, class: 'item_link', rel: 'nofollow', target: '_blank' do
       .item_flame{style: 'overflow:hidden;'}
-        .well{style: 'text-align:center;'}
+        .well{style: 'text-align:center;position:relative;'}
+          - if item.new?
+            = image_tag 'common/new.png', style: 'position:absolute;left:200px;top:-10px;z-index:1;'
           %div{style:'float:left;width:98px;margin-right:15px;'}
             = image_tag item.images.first.url, style: 'width:98px;', alt: "評価：#{item.review_average / 100.0} お値段：#{number_with_delimiter item.price}円 #{item.name}"
           %div{style:'float:left;width:110px;'}

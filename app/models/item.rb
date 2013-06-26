@@ -6,4 +6,8 @@ class Item < ActiveRecord::Base
   has_many :images, :class_name => 'ItemImage'
 
   default_scope order('updated_at DESC').limit(30)
+
+  def new?
+    created_at.to_date > Date.today - 2
+  end
 end
