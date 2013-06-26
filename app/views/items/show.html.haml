@@ -5,16 +5,19 @@
 
 .images
   - @item.images.each do |image|
-    = link_to(image_tag(image.url), @item.url)
+    = link_to(image_tag(image.url), @item.url, rel: 'nofollow')
 
-.row-fluid{style: 'color: #d14;font-size:2em;margin-top:20px;margin-bottom:10px;'}
-  価格
-  %b= number_with_delimiter @item.price
-  円
+.row-fluid{style: 'font-size:2em;margin-top:20px;margin-bottom:10px;'}
+  = link_to @item.url, style: 'color: #d14;', rel: 'nofollow' do
+    価格
+    %b= number_with_delimiter @item.price
+    円
 
 .row-fluid{style: 'font-size:1.5em;margin-top:20px;margin-bottom:10px;'}
-  = link_to @item.url do
+  = link_to @item.url, rel: 'nofollow' do
     %span{style:'text-decoration:underline;'} レビューを見る（#{number_with_delimiter @item.review_count}件）
 
 .row-fluid{style: 'margin-top:20px;margin-bottom:10px;'}
-  = simple_format @item.caption
+  %span.badge= @item.category.name
+  - @item.features.each do |feature|
+    %span.badge= feature.name
