@@ -29,7 +29,7 @@
     - if @description
       %meta{:content => "#{@description}PocketSommelier(ポケットソムリエ)では評価★★★★以上の安旨ワインのみ掲載！ワインに詳しくなくても絶対外れない商品をお選び頂けます。", "name" => "description"}/
     %meta{:content => "#{@keyword && "#{@keyword},"}ワイン,高評価,安い", "name" => "keywords"}/
-    %title= @title ? "#{@title} | PocketSommelier(ポケットソムリエ)" : "高評価のワインだけを狙いうち！ | 高評価ワインならPocketSommelier(ポケットソムリエ)"
+    %title= @title ? "#{@title} | PocketSommelier(ポケットソムリエ)" : "楽天で高評価のワインだけを狙いうち！ | 高評価ワインならPocketSommelier(ポケットソムリエ)"
     - if Rails.env == 'production'
       :javascript
         var _gaq = _gaq || [];
