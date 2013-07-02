@@ -33,9 +33,11 @@ namespace :import do
 end
 
 def import_items(rakuten_genre_id, category_id)
+  page = ENV['PAGE'] || '1'
+
   features = Feature.all
 
-  api_url = "https://app.rakuten.co.jp/services/api/IchibaItem/Search/20130424?format=json&genreId=#{rakuten_genre_id}&sort=-reviewCount&availability=1&affiliateId=09722a87.676ab167.09722a88.ce3510dc&NGKeyword=%E3%82%BB%E3%83%A9%E3%83%BC&applicationId=1031513552390120187"
+  api_url = "https://app.rakuten.co.jp/services/api/IchibaItem/Search/20130424?format=json&genreId=#{rakuten_genre_id}&page=#{page}&sort=-reviewCount&availability=1&affiliateId=09722a87.676ab167.09722a88.ce3510dc&NGKeyword=%E3%82%BB%E3%83%A9%E3%83%BC&applicationId=1031513552390120187"
   url = URI.parse(api_url)
   res = Net::HTTP.get(url)
   items = JSON.parse(res)['Items']
