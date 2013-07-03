@@ -3,18 +3,25 @@
 
 %h2= @item.name
 
+.adsense
+  :javascript
+    google_ad_client = "ca-pub-0697220786027797";
+    google_ad_slot = "3960169593";
+    google_ad_width = 250;
+    google_ad_height = 250;
+  %script{type: 'text/javascript', src: 'http://pagead2.googlesyndication.com/pagead/show_ads.js'}
 .images
   - @item.images.each do |image|
-    = link_to(image_tag(image.url), @item.url, rel: 'nofollow')
+    = link_to(image_tag(image.url), @item.url, rel: 'nofollow', target: '_blank')
 
 .row-fluid{style: 'font-size:2em;margin-top:20px;margin-bottom:10px;'}
-  = link_to @item.url, style: 'color: #d14;', rel: 'nofollow' do
+  = link_to @item.url, style: 'color: #d14;', rel: 'nofollow', target: '_blank' do
     価格
     %b= number_with_delimiter @item.price
     円
 
 .row-fluid{style: 'font-size:1.5em;margin-top:20px;margin-bottom:10px;'}
-  = link_to @item.url, rel: 'nofollow' do
+  = link_to @item.url, rel: 'nofollow', target: '_blank' do
     %span{style:'text-decoration:underline;'} レビューを見る（#{number_with_delimiter @item.review_count}件）
 
 .row-fluid{style: 'margin-top:20px;margin-bottom:10px;'}
