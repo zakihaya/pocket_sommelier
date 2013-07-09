@@ -43,10 +43,10 @@ def import_items(rakuten_genre_id, category_id)
   items = JSON.parse(res)['Items']
 
   items.each do |item_from_api|
-    next if Item.find_by_code(item_from_api['Item']['itemCode'])
     next if item_from_api['Item']['reviewAverage'] < 4
 
-    item = Item.new
+    item = Item.find_by_code(item_from_api['Item']['itemCode']) || Item.new
+
     item.provider_type = 'rakuten'
     item.category_id = category_id
     item.code = item_from_api['Item']['itemCode']
