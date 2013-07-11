@@ -1,0 +1,9 @@
+- @title = params[:q]
+- @keyword = params[:q]
+- @description = params[:q]
+
+%span{style: 'font-size:2em'}
+  キーワード
+%br
+%h1 #{params[:q]}
+= render 'shared/items', items: @items

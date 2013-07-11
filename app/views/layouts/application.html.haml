@@ -79,6 +79,12 @@
               /%li.nav-header 特徴
               - Feature.all.each do |feature|
                 %li= link_to feature.name, feature_path(feature), style:'text-decoration:underline;'
+          .well.sidebar-nav
+            /%ul.nav.nav-list
+            %ul.nav.nav-list
+              %li.nav-header 人気ワード
+              - ['バーベキュー', 'シャンパン', 'お中元', 'スペイン'].each do |keyword|
+                %li= link_to keyword, "/keywords/#{keyword}", style:'text-decoration:underline;'
             /%hr
             /%ul.nav.nav-list
             /  %li.nav-header 価格

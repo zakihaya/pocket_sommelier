@@ -10,6 +10,7 @@ PocketSommelier::Application.routes.draw do
 
   get '/search' => 'search#index', :as => 'search'
 
+  get '/keywords/:q' => 'keywords#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
