@@ -43,7 +43,7 @@
               %span{style:"font-size:0.8em;"} 価格 <span style='color:#ff3333'>#{number_with_delimiter item.price}</span>円
             %span.badge{style:'margin:1px;'}= item.category.name.sub('・', '・<br />').html_safe
             %br
-            - item.features.each do |feature|
+            - item.features[0..1].each do |feature|
               %span.badge{style:'margin:1px;'}= feature.name
           %br{style:'clear:both;'}
           %div{style:"margin-top:15px;"}

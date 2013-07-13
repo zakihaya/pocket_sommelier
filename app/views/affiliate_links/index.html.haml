@@ -1,0 +1,23 @@
+%h1 Listing affiliate_links
+
+%table
+  %tr
+    %th Title
+    %th Url
+    %th Publish end at
+    %th
+    %th
+    %th
+
+  - @affiliate_links.each do |affiliate_link|
+    %tr
+      %td= affiliate_link.title
+      %td= affiliate_link.url
+      %td= affiliate_link.publish_end_at
+      %td= link_to 'Show', affiliate_link
+      %td= link_to 'Edit', edit_affiliate_link_path(affiliate_link)
+      %td= link_to 'Destroy', affiliate_link, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Affiliate link', new_affiliate_link_path

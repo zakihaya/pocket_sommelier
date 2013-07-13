@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @affiliate_link.title
+%p
+  %b Url:
+  = @affiliate_link.url
+%p
+  %b Publish end at:
+  = @affiliate_link.publish_end_at
+
+= link_to 'Edit', edit_affiliate_link_path(@affiliate_link)
+\|
+= link_to 'Back', affiliate_links_path

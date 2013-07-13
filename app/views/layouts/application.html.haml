@@ -103,6 +103,10 @@
         .span9
           = bootstrap_flash
           = yield
+      /    .affiliate_link{style: 'margin: 10px 0'}
+      .row-fluid
+        .span12{style: 'margin: 12px 0; text-align: center'}
+          = render :partial => 'layouts/affiliate_link', :locals => { affiliate_link: AffiliateLink.order("RANDOM()").first }
       / /row
       %footer
         .row.well

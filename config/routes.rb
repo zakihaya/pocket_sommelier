@@ -1,8 +1,8 @@
 PocketSommelier::Application.routes.draw do
+  #resources :affiliate_links
+
   resources :items, :only => [:index, :show]
-
   resources :categories, :only => [:show]
-
   resources :valuations, :only => [:show]
   resources :features, :only => [:show]
 
