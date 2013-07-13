@@ -13,7 +13,7 @@ class KeywordsController < ApplicationController
   # GET /keywords/1
   # GET /keywords/1.json
   def show
-    @items = Item.unscoped.keyword_includes(params[:q])
+    @items = Item.keyword_includes(params[:q])
 
     respond_to do |format|
       format.html # show.html.erb
