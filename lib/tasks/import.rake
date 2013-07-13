@@ -58,11 +58,13 @@ def import_items(rakuten_genre_id, category_id)
     item.review_count = item_from_api['Item']['reviewCount']
     item.review_average = item_from_api['Item']['reviewAverage'] * 100
 
+    item.images.clear
     item_from_api['Item']['mediumImageUrls'].each_with_index do |image, index|
       image = ItemImage.new(url: image['imageUrl'], order: index)
       item.images << image
     end
 
+    item.features.clear
     features.each do |feature|
       if feature.include_words.split(',').any? {|target_word| item.name.include?(target_word) || item.caption.include?(target_word)}
         item.features << feature
