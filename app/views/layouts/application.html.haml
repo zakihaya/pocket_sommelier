@@ -145,7 +145,20 @@
                 %script
                   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
               %li{style: 'padding:4px 0;'}
+                %a.twitter-share-button{:href => "https://twitter.com/share", "data-lang" => "ja"} ツイート
+                :javascript
+                  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+              %li{style: 'padding:4px 0;'}
                 .fb-like{"data-href" => "http://www.pocket-sommelier.net", "data-send" => "false", "data-layout" => "button_count", "data-width" => "200", "date-show-fase" => "false"}
+              %li{style: 'padding:4px 0;'}
+                .g-plusone{"data-size" => "tall", "data-annotation" => "inline", "data-width" => "300", "data-href" => "http://www.pocket-sommelier.net"}
+                :javascript
+                  window.___gcfg = {lang: 'ja'};
+                  (function() {
+                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                    po.src = 'https://apis.google.com/js/plusone.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                  })();
         %p &copy; Pocket Sommelier 2013
     / /container
     /
