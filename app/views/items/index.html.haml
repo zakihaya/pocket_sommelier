@@ -9,8 +9,9 @@
     = link_to item_path(item), class: 'item_link', target: '_blank' do
       .item_flame{style: 'overflow:hidden;'}
         .well{style: 'text-align:center;'}
-          %div{style:'float:left;width:98px;margin-right:15px;'}
-            = image_tag item.images.first.url, style: 'width:98px;', alt: "評価：#{item.review_average / 100.0} お値段：#{number_with_delimiter item.price}円 #{item.name}"
+          - if item.images.any?
+            %div{style:'float:left;width:98px;margin-right:15px;'}
+              = image_tag item.images.first.url, style: 'width:98px;', alt: "評価：#{item.review_average / 100.0} お値段：#{number_with_delimiter item.price}円 #{item.name}"
           %div{style:'float:left;width:110px;'}
             - if item.review_average > 460
               %span.label.label-important{style: 'margin:5px 0; padding:4px; font-size: 1.1em;'} 超大人気！
