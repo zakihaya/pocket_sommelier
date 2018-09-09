@@ -5,3 +5,6 @@ http://atnd.org/event/afthon2
 
 I like wine very much, but present Rakuten web site can't search by user valuation.
 So I created application which can search popular and high valuation wine through Rakuten API.
+
+This product is too old to use.
+So I will remake by using firebase and react in a few months.
